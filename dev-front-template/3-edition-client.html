@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Edition d'un client</title>
+</head>
+
+<body>
+<header>
+    <div class="col-2">
+
+    </div>
+    <div class="col-8">
+
+    </div>
+    <!-- informations de la personne connéctée -->
+    <div class="col-2">
+
+    </div>
+</header>
+<div class="container-fluid">
+    <div class="col-md-6 mx-auto">
+        <h2>Client à modifier :</h2>
+
+        <form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nom">Nom</label>
+                    <input name="nom" type="text" minlength="2" maxlength="40" required
+                           class="form-control" id="nom" placeholder="Nom">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="prenom">Prenom</label>
+                    <input name="prenom" type="text" minlength="2" maxlength="40" required
+                           class="form-control" id="prenom" placeholder="Password">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input name="email" type="email" class="form-control" id="email" placeholder="adresse">
+            </div>
+            <div class="form-group">
+                <label for="adresse">Addresse</label>
+                <input name="adresse" type="text" class="form-control" id="adresse" placeholder="adresse">
+            </div>
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="cp">Code postal</label>
+                    <input name="cp" type="text" class="form-control" id="cp">
+                </div>
+                <div class="form-group col-md-8">
+                    <label for="ville">Ville</label>
+                    <input name="ville" type="text" class="form-control" id="ville">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Modifier</button>
+        </form>
+    </div>
+
+</div>
+</body>
+
+</html>
