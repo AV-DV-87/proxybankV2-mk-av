@@ -1,0 +1,15 @@
+
+
+div#connexion{
+    color: white;
+    margin-top:25vh;
+}
+
+.bg-bank{
+    background-color: rgba(17,30,108,1.0);
+}
+
+/* ECRAN 2 LISTE CLIENTS */
+.perso-pill{
+    padding: 1em;
+}
