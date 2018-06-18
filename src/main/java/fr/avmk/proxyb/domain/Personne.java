@@ -1,4 +1,4 @@
-package fr.avmk.proxyb.business;
+package fr.avmk.proxyb.domain;
 
 public class Personne {
 	private int id; 
