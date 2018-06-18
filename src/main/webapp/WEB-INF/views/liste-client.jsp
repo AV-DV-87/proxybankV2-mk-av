@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="<c:url value="/css/bootstrap.min.css" />" />
 <link rel="stylesheet" href="<c:url value="/css/style.css" />" />
-<title>Connexion</title>
+<title>Liste des clients</title>
 </head>
 <body>
 	<div class="container-fluid">
@@ -66,23 +66,6 @@
 									Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>
 						</tr>
 						</c:forEach>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
-								<a href="#" class="badge badge-primary perso-pill">Liste
-									Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
-								<a href="#" class="badge badge-primary perso-pill">Liste
-									Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a>
-							</td>
-						</tr>
 					</tbody>
 				</table>
 			</div>

@@ -35,8 +35,9 @@ public class ClientDAO extends AbstractDAO implements IClientDao {
 
 			while (rs.next()) {
 				Client cl = new Client();
-				cl.setNom(rs.getString(2));
 				cl.setId(rs.getInt(1));
+				cl.setNom(rs.getString(2));
+				cl.setPrenom(rs.getString(3));
 				results.add(cl);
 			}
 

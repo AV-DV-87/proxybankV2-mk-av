@@ -12,7 +12,7 @@
     
     <link rel="stylesheet" href="<c:url value="/css/bootstrap.min.css" />" />
     <link rel="stylesheet" href="<c:url value="/css/style.css" />" />
-    <title>Connexion</title>
+    <title>Bienvenue sur ProxyBank</title>
 </head>
 
 <body>
