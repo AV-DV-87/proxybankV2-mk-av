@@ -3,15 +3,58 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
 		 http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
-	<!-- EXEMPLE DECLA SERVLET -->
-	<!-- <servlet>
-		<servlet-name>DeleteServlet</servlet-name>
-		<servlet-class>fr.avdv.blog.web.DeleteServlet</servlet-class>
+	
+	<servlet>
+		<servlet-name>LoginServlet</servlet-name>
+		<servlet-class>fr.avmk.proxyb.web.LoginServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListeClientServlet</servlet-name>
+		<servlet-class>fr.avmk.proxyb.web.ListeClientServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EditionClientServlet</servlet-name>
+		<servlet-class>fr.avmk.proxyb.web.EditionClientServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ListeCompteServlet</servlet-name>
+		<servlet-class>fr.avmk.proxyb.web.ListeCompteServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>VirementServlet</servlet-name>
+		<servlet-class>fr.avmk.proxyb.web.VirementServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>BlogServlet</servlet-name>
-		<url-pattern>/helloworld</url-pattern>
-	</servlet-mapping> -->
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListeClientServlet</servlet-name>
+		<url-pattern>/liste-client</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EditionClientServlet</servlet-name>
+		<url-pattern>/edition-client</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ListeCompteServlet</servlet-name>
+		<url-pattern>/liste-compte</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>VirementServlet</servlet-name>
+		<url-pattern>/virement</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>Filtre authentification</filter-name>
+		<filter-class>fr.avmk.proxyb.web.AuthFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>Filtre authentification</filter-name>
+		<!-- possibilité d'url multiple -->
+		<url-pattern>/liste-client</url-pattern>
+		<url-pattern>/client</url-pattern>
+	</filter-mapping>
 	
 	<!-- Documentation pour les pages d'erreurs : https://docs.oracle.com/cd/E19316-01/819-3669/bnahi/index.html -->
 	<error-page>

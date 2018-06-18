@@ -39,7 +39,7 @@ public abstract class AbstractDAO {
 		// établir la connexion
 		Class.forName("com.mysql.jdbc.Driver");
 
-		String url = "jdbc:mysql://localhost:3306/coucheV2";
+		String url = "jdbc:mysql://localhost:3306/proxyb";
 		String username = "root";
 		String password = "";
 
