@@ -25,16 +25,18 @@ public class ConseillerDAO extends AbstractDAO implements IConseillerDAO {
 		Conseiller csl = new Conseiller();
 
 		try {
+			//creer une connexion  à la BDD
 			cn = getConnectionDM();
-
+			
+			//creation d'une requete
 			String sql = "SELECT * FROM client WHERE login =" + login;
-
+			
 			st = cn.prepareStatement(sql);
-
+			
+			//execute la requete stocke le dans un result set
 			rs = st.executeQuery();
 
-			// NE PAS OUBLIER car la connection �tablie d�sactive le
-			// le commit automatique
+			//commit manuel car commit auto desactivé
 			cn.commit();
 
 			while (rs.next()) {
@@ -47,7 +49,7 @@ public class ConseillerDAO extends AbstractDAO implements IConseillerDAO {
 		} finally {
 			close(cn, st, rs);
 		}
-
+		//si tout c'est bien passé retourne le conseiller
 		return csl;
 	}
 	
