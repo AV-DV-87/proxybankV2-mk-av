@@ -2,7 +2,7 @@ package fr.avmk.proxyb.domain;
 
 public class Personne {
 	private int id; 
-	private String name; 
+	private String nom; 
 	private String prenom;
 	private String email;
 	
@@ -13,7 +13,7 @@ public class Personne {
 	public Personne(int id, String name, String prenom, String email) {
 		super();
 		this.id = id;
-		this.name = name;
+		this.nom = name;
 		this.prenom = prenom;
 		this.email = email;
 	}
@@ -23,11 +23,11 @@ public class Personne {
 	public void setId(int id) {
 		this.id = id;
 	}
-	public String getName() {
-		return name;
+	public String getNom() {
+		return nom;
 	}
-	public void setName(String name) {
-		this.name = name;
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 	public String getPrenom() {
 		return prenom;

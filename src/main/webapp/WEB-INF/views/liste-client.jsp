@@ -56,11 +56,11 @@
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach var="article" items="${sessionScope.listeClient}">
+						<c:forEach var="client" items="${sessionScope.listeClient}">
 						<tr>
-							<th scope="row">${article.id}</th>
-							<td>${article.nom}</td>
-							<td>${article.prenom}</td>
+							<th scope="row">${client.id}</th>
+							<td>${client.nom}</td>
+							<td>${client.prenom}</td>
 							<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
 								<a href="#" class="badge badge-primary perso-pill">Liste
 									Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>

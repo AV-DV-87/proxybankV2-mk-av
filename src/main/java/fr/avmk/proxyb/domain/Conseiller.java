@@ -3,16 +3,18 @@ package fr.avmk.proxyb.domain;
 public class Conseiller extends Personne {
 private String login; 
 private String password;
+
+/**
+ * Cosntructeur par défaut
+ */
 public Conseiller() {
 	super();
 	// TODO Auto-generated constructor stub
 }
-public Conseiller(int id, String name, String prenom, String email) {
-	super(id, name, prenom, email);
-	// TODO Auto-generated constructor stub
-}
-public Conseiller(String login, String password) {
-	super();
+
+
+public Conseiller(int id, String nom, String prenom, String email, String login, String password) {
+	super(id, nom, prenom, email);
 	this.login = login;
 	this.password = password;
 }

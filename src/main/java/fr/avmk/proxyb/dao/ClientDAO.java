@@ -35,7 +35,7 @@ public class ClientDAO extends AbstractDAO implements IClientDao {
 
 			while (rs.next()) {
 				Client cl = new Client();
-				cl.setName(rs.getString(2));
+				cl.setNom(rs.getString(2));
 				cl.setId(rs.getInt(1));
 				results.add(cl);
 			}
@@ -83,7 +83,7 @@ public class ClientDAO extends AbstractDAO implements IClientDao {
 			cn.commit();
 
 			while (rs.next()) {
-				cl.setName(rs.getString(2));
+				cl.setNom(rs.getString(2));
 				cl.setId(rs.getInt(1));
 			}
 
