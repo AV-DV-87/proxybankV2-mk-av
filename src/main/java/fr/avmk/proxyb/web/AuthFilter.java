@@ -14,7 +14,7 @@ import javax.servlet.http.HttpSession;
 
 
 public class AuthFilter implements Filter {
-public static final String SESSION_AUTH = "auth";
+public static final String SESSION_AUTH = "username";
 	
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
@@ -33,7 +33,7 @@ public static final String SESSION_AUTH = "auth";
 			chain.doFilter(request, response);
 		}else {
 			//utilisateur inconnu
-			((HttpServletResponse)response).sendRedirect("/login");
+			((HttpServletResponse)response).sendRedirect("login");
 			// possibilité de message pour traitement AJAX((HttpServletResponse)response).sendError(401, "Veuillez vous authentifier");
 		}
 	}
