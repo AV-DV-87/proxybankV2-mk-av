@@ -29,7 +29,7 @@ public class ConseillerDAO extends AbstractDAO implements IConseillerDAO {
 			cn = getConnectionDM();
 			
 			//creation d'une requete
-			String sql = "SELECT * FROM client WHERE login =" + login;
+			String sql = "SELECT * FROM conseiller WHERE login ='"+ login+"'";
 			
 			st = cn.prepareStatement(sql);
 			
@@ -41,7 +41,7 @@ public class ConseillerDAO extends AbstractDAO implements IConseillerDAO {
 
 			while (rs.next()) {
 				csl.setLogin(rs.getString(2));
-				csl.setPassword(rs.getString(1));
+				csl.setPassword(rs.getString(3));
 			}
 
 		} catch (ClassNotFoundException | SQLException e) {

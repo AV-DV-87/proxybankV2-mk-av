@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 import fr.avmk.proxyb.domain.Client;
 
-public class ClientDao extends AbstractDAO implements IClientDao {
+public class ClientDAO extends AbstractDAO implements IClientDao {
 
 	@Override
 	public List<Client> findAllClient() {
@@ -56,7 +56,7 @@ public class ClientDao extends AbstractDAO implements IClientDao {
 		// initialisation du result set
 		ResultSet rs = null;
 		Client cl = new Client();
-
+		
 	}
 
 	@Override
