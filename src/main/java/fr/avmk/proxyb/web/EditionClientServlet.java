@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ListeClientServlet extends HttpServlet {
+public class EditionClientServlet extends HttpServlet {
 
 	/**
 	 * 

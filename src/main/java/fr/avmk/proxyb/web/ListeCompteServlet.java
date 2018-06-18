@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ListeClientServlet extends HttpServlet {
+public class ListeCompteServlet extends HttpServlet {
 
 	/**
 	 * 
@@ -16,7 +16,7 @@ public class ListeClientServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher("/WEB-INF/views/liste-client.jsp").forward(req, resp);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/views/liste-compte.jsp").forward(req, resp);
 	}
 	
 }
