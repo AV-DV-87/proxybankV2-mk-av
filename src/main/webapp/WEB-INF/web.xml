@@ -12,4 +12,10 @@
 		<servlet-name>BlogServlet</servlet-name>
 		<url-pattern>/helloworld</url-pattern>
 	</servlet-mapping> -->
+	
+	<!-- Documentation pour les pages d'erreurs : https://docs.oracle.com/cd/E19316-01/819-3669/bnahi/index.html -->
+	<error-page>
+		<error-code>404</error-code>
+		<location>/WEB-INF/error404.jsp</location>
+	</error-page>
 </web-app>
