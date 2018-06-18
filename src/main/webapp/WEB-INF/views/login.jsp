@@ -48,11 +48,11 @@
     <div class="row">
         <div id="connexion" class="col-md-6 mx-auto bg-bank p-4">
             <h2>CONNEXION</h2>
-            <form>
+            <form method="post">
                 <div class="form-group">
-                    <label for="username">Nom d'utilisateur</label>
-                    <input type="text" class="form-control" id="username" aria-describedby="emailHelp"
-                           name="username" placeholder="Enter email">
+                    <label for="login">Nom d'utilisateur</label>
+                    <input type="text" class="form-control" id="login"
+                           name="login" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                     <label for="password">Mot de passe</label>

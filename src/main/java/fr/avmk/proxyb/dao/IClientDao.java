@@ -13,14 +13,13 @@ public interface IClientDao {
 	 */
 	
 	public void save(Client c);
+	
 	public List<Client> findAll();
 
 	public void update(Client c);
 
 	public Client findById(int id);
 	
-
-
-		
 	
+
 }
