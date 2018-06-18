@@ -24,4 +24,10 @@ public class SqlClientDao extends AbstractDAO implements IClientDao {
 		return null;
 	}
 
+	@Override
+	public void save(Client c) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
