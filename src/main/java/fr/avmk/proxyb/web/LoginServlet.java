@@ -33,11 +33,14 @@ public class LoginServlet extends HttpServlet {
 		//Envoyer le login récupérer le conseiller
 		
 		if(login == conserv.findByLog(login).getLogin() && password == conserv.findByLog(login).getPassword()) {
-			req.getSession().setAttribute("username", login);
+			//1 attribut une valeur à à la constante SESSION AUTH et inscrit là en session
+			req.getSession().setAttribute(AuthFilter.SESSION_AUTH, login);
+			//redirige vers la page qui permet d'afficher les clients du conseiller connécté
+			resp.sendRedirect(this.getServletContext().getContextPath() + "/liste-clients");
 		}
 		//si pas de correspondance mettre l'attribut à null
 		else {
-			req.getSession().setAttribute("username", null);
+			req.getSession().setAttribute(AuthFilter.SESSION_AUTH, null);
 		}
 		
 	}
