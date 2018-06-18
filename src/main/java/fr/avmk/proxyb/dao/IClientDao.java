@@ -9,15 +9,19 @@ public interface IClientDao {
 
 	/**
 	 * permet de visualiser la liste de clients
-	 * @return liste des clients
+	 * @return List liste des clients
 	 */
-	
-	public void save(Client c);
-	
-	public List<Client> findAll();
-
+	public List<Client> findAllClient();
+	/**
+	 * Permets de mettre à jour les informations d'un client
+	 * @param c Client
+	 */
 	public void update(Client c);
-
+	/**
+	 * Permet de trouver un client à partir de son id
+	 * @return List liste des clients
+	 * @param int id identifiant à rechercher
+	 */
 	public Client findById(int id);
 	
 	
