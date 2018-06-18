@@ -10,7 +10,7 @@ import java.util.List;
 
 import fr.avmk.proxyb.domain.Compte;
 
-public class SqlCompteDao extends AbstractDAO implements ICompteDao {
+public class CompteDao extends AbstractDAO implements ICompteDao {
 
 	@Override
 	public Compte findById(int id) {
