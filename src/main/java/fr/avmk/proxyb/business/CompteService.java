@@ -12,13 +12,13 @@ public class CompteService implements ICompteService {
      ICompteDAO dao=new CompteDAO();
 	
 	@Override
-	public Compte getValidatedCompte(int id) {
+	public Compte findById(int id) {
 		
 		return dao.findById(id);
 	}
 
 	@Override
-	public List<Compte> getAllCompte() {
+	public List<Compte> findAll() {
 	
 		return dao.findAll();
 	}

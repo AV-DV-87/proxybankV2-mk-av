@@ -7,7 +7,7 @@ import fr.avmk.proxyb.domain.Compte;
 
 public interface ICompteService {
 
-	public Compte getValidatedCompte(int id);
+	public Compte findById(int id);
 
-	public List<Compte> getAllCompte();
+	public List<Compte> findAll();
 }

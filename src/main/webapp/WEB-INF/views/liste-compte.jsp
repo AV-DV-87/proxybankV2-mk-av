@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="<c:url value="/css/bootstrap.min.css" />" />
 <link rel="stylesheet" href="<c:url value="/css/style.css" />" />
-<title>Connexion</title>
+<title>Liste des comptes</title>
 </head>
 <body>
 	<div class="container-fluid">
@@ -57,32 +57,16 @@
 						</tr>
 					</thead>
 					<tbody>
-					
-						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
-								<a href="#" class="badge badge-primary perso-pill">Liste
-									Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
-								<a href="#" class="badge badge-primary perso-pill">Liste
-									Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
-								<a href="#" class="badge badge-primary perso-pill">Liste
-									Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a>
-							</td>
-						</tr>
+						<c:forEach var="client" items="${sessionScope.listeClient}">
+							<tr>
+								<th scope="row"></th>
+								<td>Mark</td>
+								<td>Otto</td>
+								<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
+									<a href="#" class="badge badge-primary perso-pill">Liste
+										Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>
+							</tr>
+						</c:forEach>
 					</tbody>
 				</table>
 			</div>
