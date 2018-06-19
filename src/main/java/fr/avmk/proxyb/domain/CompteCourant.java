@@ -18,7 +18,6 @@ public class CompteCourant extends Compte {
 
 	public CompteCourant() {
 		super();
-<<<<<<< HEAD
 		// TODO Auto-generated constructor stub
 	}
 
@@ -32,19 +31,8 @@ public class CompteCourant extends Compte {
 	 * @param proprietaire
 	 *            le Client.
 	 */
-	public CompteCourant(int id, double solde, Client proprietaire) {
-		super(id, solde, proprietaire);
-		// TODO Auto-generated constructor stub
-	}
-
-	public CompteCourant(double dec) {
-		super();
-=======
-	}
-
 	public CompteCourant(int id, double solde, Client proprietaire, double dec) {
 		super(id, solde, proprietaire);
->>>>>>> 628d1d29adc8b2c6b5137cb95dfd163926953bd5
 		this.dec = dec;
 	}
 

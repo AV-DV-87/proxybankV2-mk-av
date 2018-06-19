@@ -17,8 +17,7 @@ public class CompteEpargne extends Compte {
 
 	public CompteEpargne() {
 		super();
-<<<<<<< HEAD
-		// TODO Auto-generated constructor stub
+		
 	}
 
 	/**
@@ -31,22 +30,6 @@ public class CompteEpargne extends Compte {
 	 * @param proprietaire
 	 *            le Client
 	 */
-	public CompteEpargne(int id, double solde, Client proprietaire) {
-		super(id, solde, proprietaire);
-		// TODO Auto-generated constructor stub
-	}
-
-	public CompteEpargne(double tx) {
-		super();
-		this.tx = tx;
-	}
-
-	public double getTx() {
-		return tx;
-	}
-
-=======
-	}
 
 	public CompteEpargne(int id, double solde, Client proprietaire, double tx) {
 		super(id, solde, proprietaire);
@@ -57,7 +40,6 @@ public class CompteEpargne extends Compte {
 		return tx;
 	}
 
->>>>>>> 628d1d29adc8b2c6b5137cb95dfd163926953bd5
 	public void setTx(double tx) {
 		this.tx = tx;
 	}
