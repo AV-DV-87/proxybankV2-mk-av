@@ -61,9 +61,7 @@
 								<th scope="row">${compte.id}</th>
 								<td></td>
 								<td>${compte.solde}</td>
-								<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
-									<a href="#" class="badge badge-primary perso-pill">Liste
-										Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>
+								<td><a href="#" class="badge badge-primary perso-pill">Virement</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>

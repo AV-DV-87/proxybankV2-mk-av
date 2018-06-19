@@ -16,7 +16,8 @@ public interface IClientDAO {
 	 * Permets de mettre à jour les informations d'un client
 	 * @param c Client
 	 */
-	public void update(Client c);
+	public void update(int id, String nom, String prenom, String adresse, String codep, 
+			String ville, String email);
 	/**
 	 * Permet de trouver un client à partir de son id
 	 * @return List liste des clients

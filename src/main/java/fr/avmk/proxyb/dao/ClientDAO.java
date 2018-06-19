@@ -51,12 +51,49 @@ public class ClientDAO extends AbstractDAO implements IClientDAO {
 	}
 
 	@Override
-	public void update(Client c) {
+	public void update(int id, String nom, String prenom, String adresse, String codep, 
+			String ville, String email) {
 		Connection cn = null;
 		PreparedStatement st = null;
 		// initialisation du result set
 		ResultSet rs = null;
 		Client cl = new Client();
+		
+		try {
+			// recupération d'une connection grâce à l'abstract DAO
+			// Attention penser à la fermer
+			cn = getConnectionDM();
+
+			String sql = "UPDATE CLIENT SET NOM =?, PRENOM =?, ADRESSE =?, CODEPOSTAL =?, VILLE =?, EMAIL =?, idConseiller =? WHERE id="+id;
+
+			st = cn.prepareStatement(sql);
+			
+			st.setString(1, nom);
+			st.setString(2, prenom);
+			st.setString(3, adresse);
+			st.setString(4, codep);
+			st.setString(5, ville);
+			st.setString(6, email);
+
+			st.executeUpdate();
+
+			// NE PAS OUBLIER car la connection �tablie d�sactive le
+			// le commit automatique
+			cn.commit();
+
+			while (rs.next()) {
+				cl.setNom(rs.getString(2));
+				cl.setId(rs.getInt(1));
+			}
+
+		} catch (ClassNotFoundException | SQLException e) {
+			e.printStackTrace();
+		} finally {
+			// fermeture de tous les outils utilisé pour la connection
+			// et la requête
+			close(cn, st, rs);
+		}
+		
 		
 	}
 
