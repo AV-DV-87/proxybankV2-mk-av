@@ -24,5 +24,4 @@ public class ListeClientServlet extends HttpServlet {
 		req.getSession(true).setAttribute("listeClient", cliser.findAllClient());
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/liste-client.jsp").forward(req, resp);
 	}
-	
 }
