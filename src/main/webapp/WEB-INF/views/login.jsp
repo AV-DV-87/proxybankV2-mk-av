@@ -41,12 +41,12 @@
 					<div class="form-group">
 						<label for="login">Nom d'utilisateur</label> <input type="text"
 							class="form-control" id="login" name="login"
-							placeholder="Enter email">
+							placeholder="Entrer votre nom d'utlisateur">
 					</div>
 					<div class="form-group">
 						<label for="password">Mot de passe</label> <input name="password"
 							type="password" class="form-control" id="password"
-							placeholder="Password">
+							placeholder="Password" placeholder="Entrer votre nom d'utlisateur">
 					</div>
 					<button type="submit" class="btn btn-primary">Submit</button>
 				</form>
