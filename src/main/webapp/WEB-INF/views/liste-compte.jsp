@@ -12,7 +12,7 @@
 
 <link rel="stylesheet" href="<c:url value="/css/bootstrap.min.css" />" />
 <link rel="stylesheet" href="<c:url value="/css/style.css" />" />
-<title>Connexion</title>
+<title>Liste des comptes</title>
 </head>
 <body>
 	<div class="container-fluid">
@@ -44,45 +44,28 @@
 
 		</header>
 		<div class="row">
-			<h2>GESTION DES CLIENTS</h2>
 			<div class="col-10 mx-auto">
+				<h2>GESTION DES COMPTES</h2>
 				<table class="table">
 					<thead class="thead-light">
 						<tr>
 							<th scope="col">N°Compte</th>
 							<th scope="col">Type de compte</th>
-							<th scope="col">Date d'ouverture</th>
 							<th scope="col">Solde</th>
 							<th scope="col">Actions</th>
 						</tr>
 					</thead>
 					<tbody>
-					
-						<tr>
-							<th scope="row">1</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
-								<a href="#" class="badge badge-primary perso-pill">Liste
-									Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>
-						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
-								<a href="#" class="badge badge-primary perso-pill">Liste
-									Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
-								<a href="#" class="badge badge-primary perso-pill">Liste
-									Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a>
-							</td>
-						</tr>
+						<c:forEach var="compte" items="${sessionScope.listeCompte}">
+							<tr>
+								<th scope="row">${compte.id}</th>
+								<td></td>
+								<td>${compte.solde}</td>
+								<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
+									<a href="#" class="badge badge-primary perso-pill">Liste
+										Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>
+							</tr>
+						</c:forEach>
 					</tbody>
 				</table>
 			</div>

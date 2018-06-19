@@ -1,10 +1,17 @@
 package fr.avmk.proxyb.domain;
+<<<<<<< HEAD
 
 /**
  * Compte est la classe représentant un compte bancaire de BroxiBanque.
  * 
  * @author VALETTE & KHEZNADJI
  * @version 1.0
+=======
+/**
+ * Classe permettant de regrouper les attributs d'un compte.
+ * @author Arnaud
+ *
+>>>>>>> 628d1d29adc8b2c6b5137cb95dfd163926953bd5
  */
 public class Compte {
 	private int id;
@@ -16,6 +23,7 @@ public class Compte {
 		// TODO Auto-generated constructor stub
 	}
 
+<<<<<<< HEAD
 	/**
 	 * Constructeur Compte avec paramètres
 	 * 
@@ -26,6 +34,8 @@ public class Compte {
 	 * @param proprietaire
 	 *            le Client
 	 */
+=======
+>>>>>>> 628d1d29adc8b2c6b5137cb95dfd163926953bd5
 	public Compte(int id, double solde, Client proprietaire) {
 		super();
 		this.id = id;

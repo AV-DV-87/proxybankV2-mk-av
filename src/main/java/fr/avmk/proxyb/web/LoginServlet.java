@@ -32,7 +32,7 @@ public class LoginServlet extends HttpServlet {
 		
 		//Envoyer le login récupérer le conseiller
 		
-		if(login == conserv.findByLog(login).getLogin() && password == conserv.findByLog(login).getPassword()) {
+			if(login.equals(conserv.findByLog(login).getLogin()) && password.equals(conserv.findByLog(login).getPassword())) {
 			
 			//attribut une valeur à à la constante SESSION AUTH et inscrit là en session
 			req.getSession().setAttribute(AuthFilter.SESSION_AUTH, login);

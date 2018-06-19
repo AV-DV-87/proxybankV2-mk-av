@@ -1,4 +1,9 @@
 package fr.avmk.proxyb.domain;
+/**
+ * Classe qui hérite de la classe Compte et qui permet d'instancier des comptes epargne.
+ * @author Arnaud
+ *
+ */
 
 /**
  * CompteEpargne est la classe représentant un compte épargne à la banque
@@ -12,6 +17,7 @@ public class CompteEpargne extends Compte {
 
 	public CompteEpargne() {
 		super();
+<<<<<<< HEAD
 		// TODO Auto-generated constructor stub
 	}
 
@@ -39,6 +45,19 @@ public class CompteEpargne extends Compte {
 		return tx;
 	}
 
+=======
+	}
+
+	public CompteEpargne(int id, double solde, Client proprietaire, double tx) {
+		super(id, solde, proprietaire);
+		this.tx = tx;
+	}
+
+	public double getTx() {
+		return tx;
+	}
+
+>>>>>>> 628d1d29adc8b2c6b5137cb95dfd163926953bd5
 	public void setTx(double tx) {
 		this.tx = tx;
 	}

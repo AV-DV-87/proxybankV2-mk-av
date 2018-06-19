@@ -1,4 +1,9 @@
 package fr.avmk.proxyb.domain;
+/**
+ * Classe qui hérite de la classe Compte et qui permet d'instancier des comptes courant.
+ * @author Arnaud
+ *
+ */
 
 /**
  * CompteCourant est la classe représentant un compte courant à la banque
@@ -13,6 +18,7 @@ public class CompteCourant extends Compte {
 
 	public CompteCourant() {
 		super();
+<<<<<<< HEAD
 		// TODO Auto-generated constructor stub
 	}
 
@@ -33,6 +39,12 @@ public class CompteCourant extends Compte {
 
 	public CompteCourant(double dec) {
 		super();
+=======
+	}
+
+	public CompteCourant(int id, double solde, Client proprietaire, double dec) {
+		super(id, solde, proprietaire);
+>>>>>>> 628d1d29adc8b2c6b5137cb95dfd163926953bd5
 		this.dec = dec;
 	}
 
