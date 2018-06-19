@@ -44,24 +44,23 @@
 
 		</header>
 		<div class="row">
-			<h2>GESTION DES CLIENTS</h2>
 			<div class="col-10 mx-auto">
+				<h2>GESTION DES COMPTES</h2>
 				<table class="table">
 					<thead class="thead-light">
 						<tr>
 							<th scope="col">N°Compte</th>
 							<th scope="col">Type de compte</th>
-							<th scope="col">Date d'ouverture</th>
 							<th scope="col">Solde</th>
 							<th scope="col">Actions</th>
 						</tr>
 					</thead>
 					<tbody>
-						<c:forEach var="client" items="${sessionScope.listeClient}">
+						<c:forEach var="compte" items="${sessionScope.listeCompte}">
 							<tr>
-								<th scope="row"></th>
-								<td>Mark</td>
-								<td>Otto</td>
+								<th scope="row">${compte.id}</th>
+								<td></td>
+								<td>${compte.solde}</td>
 								<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
 									<a href="#" class="badge badge-primary perso-pill">Liste
 										Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>
