@@ -10,7 +10,6 @@ public class Conseiller extends Personne {
 	private String login;
 	private String password;
 
-	
 	public Conseiller() {
 		super();
 		// TODO Auto-generated constructor stub

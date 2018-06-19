@@ -1,6 +1,5 @@
 package fr.avmk.proxyb.domain;
 
-
 /**
  * Compte est la classe représentant un compte bancaire de BroxiBanque.
  * 
@@ -17,7 +16,6 @@ public class Compte {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
 
 	/**
 	 * Constructeur Compte avec paramètres
@@ -51,7 +49,6 @@ public class Compte {
 	public void setSolde(double solde) {
 		this.solde = solde;
 	}
-	
 
 	/**
 	 * @return the type
@@ -60,14 +57,13 @@ public class Compte {
 		return type;
 	}
 
-
 	/**
-	 * @param type the type to set
+	 * @param type
+	 *            the type to set
 	 */
 	public void setType(String type) {
 		this.type = type;
 	}
-
 
 	public Client getProprietaire() {
 		return proprietaire;
@@ -76,6 +72,5 @@ public class Compte {
 	public void setProprietaire(Client proprietaire) {
 		this.proprietaire = proprietaire;
 	}
-	
 
 }

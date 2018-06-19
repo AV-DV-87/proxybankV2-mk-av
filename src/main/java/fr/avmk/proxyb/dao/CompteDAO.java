@@ -60,7 +60,7 @@ public class CompteDAO extends AbstractDAO implements ICompteDAO {
 		PreparedStatement pst = null;
 		ResultSet rs = null;
 		List<Compte> comptes = new ArrayList<Compte>();
-		
+
 		try {
 			cn = getConnectionDM();
 		} catch (ClassNotFoundException | SQLException e) {
@@ -108,14 +108,14 @@ public class CompteDAO extends AbstractDAO implements ICompteDAO {
 		PreparedStatement pst = null;
 		ResultSet rs = null;
 		List<Compte> comptes = new ArrayList<Compte>();
-		
+
 		try {
 			cn = getConnectionDM();
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
 
 		}
-		String sql = "SELECT * FROM `compte` WHERE proprietaire="+proprio;
+		String sql = "SELECT * FROM `compte` WHERE proprietaire=" + proprio;
 		try {
 			pst = cn.prepareStatement(sql);
 			rs = pst.executeQuery();
@@ -156,16 +156,16 @@ public class CompteDAO extends AbstractDAO implements ICompteDAO {
 		PreparedStatement st = null;
 		// initialiser juste pour utiliser la méthode close de connection
 		ResultSet rs = null;
-		
+
 		try {
 			// recupération d'une connection grâce à l'abstract DAO
 			// Attention penser à la fermer
 			cn = getConnectionDM();
 
-			String sql = "UPDATE C SET SOLDE=? WHERE id="+id;
+			String sql = "UPDATE C SET SOLDE=? WHERE id=" + id;
 
 			st = cn.prepareStatement(sql);
-			
+
 			st.setDouble(1, solde);
 
 			st.executeUpdate();
@@ -181,7 +181,7 @@ public class CompteDAO extends AbstractDAO implements ICompteDAO {
 			// et la requête
 			close(cn, st, rs);
 		}
-		
+
 	}
 
 }

@@ -28,16 +28,17 @@
 				<div
 					class="col-2  d-flex justify-content-center align-items-center flex-column">
 					<h3>Bienvenue</h3>
-					<span class="text-center"><c:out value="${username}"/></span>
-					<a href="#" class="text-center">Se deconnecter</a>
+					<span class="text-center"><c:out value="${username}" /></span> <a
+						href="#" class="text-center">Se deconnecter</a>
 				</div>
 			</div>
 			<div class="row mt-3">
 				<div class="col-md-6 mx-auto">
 					<ul class="nav justify-content-center">
-						<li class="nav-item"><a class="nav-link active" href="<c:url value="/liste-client"/>">Liste
-								des clients</a></li>
-						<li class="nav-item"><a class="nav-link" href="<c:url value="/virement"/>">Virement</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							href="<c:url value="/liste-client"/>">Liste des clients</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="<c:url value="/virement"/>">Virement</a></li>
 					</ul>
 				</div>
 			</div>
@@ -48,9 +49,9 @@
 
 			<form method="post">
 				<div class="form-row">
-						<%-- ajout d'un champs hidden contenant l'id pour ne pas perdre le client entre l'affichage et l'update --%>
-						<input name="id" type="hidden" required class="form-control"
-							id="id" placeholder="id" value="${id}">
+					<%-- ajout d'un champs hidden contenant l'id pour ne pas perdre le client entre l'affichage et l'update --%>
+					<input name="id" type="hidden" required class="form-control"
+						id="id" placeholder="id" value="${id}">
 					<div class="form-group col-md-6">
 						<label for="nom">Nom</label> <input name="nom" type="text"
 							minlength="2" maxlength="40" required class="form-control"
@@ -75,8 +76,8 @@
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-4">
-						<label for="codep">Code postal</label> <input name="codep" type="text"
-							class="form-control" id="codep" value="${codep}">
+						<label for="codep">Code postal</label> <input name="codep"
+							type="text" class="form-control" id="codep" value="${codep}">
 					</div>
 					<div class="form-group col-md-8">
 						<label for="ville">Ville</label> <input name="ville" type="text"

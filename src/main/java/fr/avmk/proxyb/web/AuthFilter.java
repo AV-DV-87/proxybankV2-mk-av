@@ -12,34 +12,35 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-
 public class AuthFilter implements Filter {
-public static final String SESSION_AUTH = "username";
-	
+	public static final String SESSION_AUTH = "username";
+
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
-		
+
 	}
 
 	@Override
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
-		
-		//recup requete et prendre la session
-		final HttpSession session = ((HttpServletRequest)request).getSession();
-		
-		if(session.getAttribute(SESSION_AUTH) != null) {
-			//utilisateur est authentifié
+
+		// recup requete et prendre la session
+		final HttpSession session = ((HttpServletRequest) request).getSession();
+
+		if (session.getAttribute(SESSION_AUTH) != null) {
+			// utilisateur est authentifié
 			chain.doFilter(request, response);
-		}else {
-			//utilisateur inconnu
-			((HttpServletResponse)response).sendRedirect("login");
-			// possibilité de message pour traitement AJAX((HttpServletResponse)response).sendError(401, "Veuillez vous authentifier");
+		} else {
+			// utilisateur inconnu
+			((HttpServletResponse) response).sendRedirect("login");
+			// possibilité de message pour traitement
+			// AJAX((HttpServletResponse)response).sendError(401, "Veuillez vous
+			// authentifier");
 		}
 	}
 
 	@Override
 	public void destroy() {
-		
+
 	}
 }

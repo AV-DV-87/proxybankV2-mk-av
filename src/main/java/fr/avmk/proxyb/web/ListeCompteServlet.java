@@ -18,24 +18,23 @@ public class ListeCompteServlet extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
-	
-	//appel à compte Service
+
+	// appel à compte Service
 	CompteService cpteser = new CompteService();
-	
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		Integer proprio = null;
 		proprio = Integer.parseInt(req.getParameter("client"));
-		
-		//défini une liste de compte en session pour la rendre accessible à la JSP
-		
+
+		// défini une liste de compte en session pour la rendre accessible à la JSP
+
 		List<Compte> results = new ArrayList<Compte>();
-		//trouve les compte du client envoyé en GET
+		// trouve les compte du client envoyé en GET
 		results = cpteser.findByProprio(proprio);
-		//renvoi les résultats dans une liste en session
+		// renvoi les résultats dans une liste en session
 		req.getSession().setAttribute("listeCompte", results);
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/liste-compte.jsp").forward(req, resp);
 	}
-	
+
 }

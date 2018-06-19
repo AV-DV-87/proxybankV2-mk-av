@@ -28,16 +28,17 @@
 				<div
 					class="col-2  d-flex justify-content-center align-items-center flex-column">
 					<h3>Bienvenue</h3>
-					<span class="text-center"><c:out value="${username}"/></span>
-					<a href="#" class="text-center">Se deconnecter</a>
+					<span class="text-center"><c:out value="${username}" /></span> <a
+						href="#" class="text-center">Se deconnecter</a>
 				</div>
 			</div>
 			<div class="row mt-3">
 				<div class="col-md-6 mx-auto">
 					<ul class="nav justify-content-center">
-						<li class="nav-item"><a class="nav-link active" href="<c:url value="/liste-client"/>">Liste
-								des clients</a></li>
-						<li class="nav-item"><a class="nav-link" href="<c:url value="/virement"/>">Virement</a></li>
+						<li class="nav-item"><a class="nav-link active"
+							href="<c:url value="/liste-client"/>">Liste des clients</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="<c:url value="/virement"/>">Virement</a></li>
 					</ul>
 				</div>
 			</div>

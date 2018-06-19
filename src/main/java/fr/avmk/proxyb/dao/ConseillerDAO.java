@@ -1,6 +1,3 @@
-/**
- * 
- */
 package fr.avmk.proxyb.dao;
 
 import java.sql.Connection;
@@ -11,11 +8,12 @@ import java.sql.SQLException;
 import fr.avmk.proxyb.domain.Conseiller;
 
 /**
+ * 
  * @author Arnaud
  *
  */
 public class ConseillerDAO extends AbstractDAO implements IConseillerDAO {
-	
+
 	@Override
 	public Conseiller findByLog(String login) {
 		Connection cn = null;
@@ -25,18 +23,18 @@ public class ConseillerDAO extends AbstractDAO implements IConseillerDAO {
 		Conseiller csl = new Conseiller();
 
 		try {
-			//creer une connexion  à la BDD
+			// creer une connexion à la BDD
 			cn = getConnectionDM();
-			
-			//creation d'une requete
-			String sql = "SELECT * FROM conseiller WHERE login ='"+ login+"'";
-			
+
+			// creation d'une requete
+			String sql = "SELECT * FROM conseiller WHERE login ='" + login + "'";
+
 			st = cn.prepareStatement(sql);
-			
-			//execute la requete stocke le dans un result set
+
+			// execute la requete stocke le dans un result set
 			rs = st.executeQuery();
 
-			//commit manuel car commit auto desactivé
+			// commit manuel car commit auto desactivé
 			cn.commit();
 
 			while (rs.next()) {
@@ -49,8 +47,8 @@ public class ConseillerDAO extends AbstractDAO implements IConseillerDAO {
 		} finally {
 			close(cn, st, rs);
 		}
-		//si tout c'est bien passé retourne le conseiller
+		// si tout c'est bien passé retourne le conseiller
 		return csl;
 	}
-	
+
 }

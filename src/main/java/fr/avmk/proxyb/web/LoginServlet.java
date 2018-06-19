@@ -10,41 +10,42 @@ import javax.servlet.http.HttpServletResponse;
 import fr.avmk.proxyb.business.ConseillerService;
 
 public class LoginServlet extends HttpServlet {
-	
+
 	ConseillerService conserv = new ConseillerService();
-	
+
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, resp);
 	}
-	
+
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+
 		String login = req.getParameter("login");
 		String password = req.getParameter("password");
-		
-		
-		//Envoyer le login récupérer le conseiller
-		
-			if(login.equals(conserv.findByLog(login).getLogin()) && password.equals(conserv.findByLog(login).getPassword())) {
-			
-			//attribut une valeur à à la constante SESSION AUTH et inscrit là en session
+
+		// Envoyer le login récupérer le conseiller
+
+		if (login.equals(conserv.findByLog(login).getLogin())
+				&& password.equals(conserv.findByLog(login).getPassword())) {
+
+			// attribut une valeur à à la constante SESSION AUTH et inscrit là en session
 			req.getSession().setAttribute(AuthFilter.SESSION_AUTH, login);
-			//redirige vers la page qui permet d'afficher les clients du conseiller connécté
+			// redirige vers la page qui permet d'afficher les clients du conseiller
+			// connécté
 			resp.sendRedirect(this.getServletContext().getContextPath() + "/liste-client");
 
 		}
-		//si pas de correspondance mettre l'attribut à null
+		// si pas de correspondance mettre l'attribut à null
 		else {
 			req.getSession().setAttribute(AuthFilter.SESSION_AUTH, null);
 		}
-		
+
 	}
 
 }

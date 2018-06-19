@@ -51,22 +51,21 @@ public class ClientDAO extends AbstractDAO implements IClientDAO {
 	}
 
 	@Override
-	public void update(int id, String nom, String prenom, String adresse, String codep, 
-			String ville, String email) {
+	public void update(int id, String nom, String prenom, String adresse, String codep, String ville, String email) {
 		Connection cn = null;
 		PreparedStatement st = null;
 		// initialiser juste pour utiliser la méthode close de connection
 		ResultSet rs = null;
-		
+
 		try {
 			// recupération d'une connection grâce à l'abstract DAO
 			// Attention penser à la fermer
 			cn = getConnectionDM();
 
-			String sql = "UPDATE CLIENT SET NOM =?, PRENOM =?, EMAIL =?, ADRESSE =?, CODEP =?, VILLE =? WHERE id="+id;
+			String sql = "UPDATE CLIENT SET NOM =?, PRENOM =?, EMAIL =?, ADRESSE =?, CODEP =?, VILLE =? WHERE id=" + id;
 
 			st = cn.prepareStatement(sql);
-			
+
 			st.setString(1, nom);
 			st.setString(2, prenom);
 			st.setString(3, adresse);
@@ -87,8 +86,7 @@ public class ClientDAO extends AbstractDAO implements IClientDAO {
 			// et la requête
 			close(cn, st, rs);
 		}
-		
-		
+
 	}
 
 	@Override

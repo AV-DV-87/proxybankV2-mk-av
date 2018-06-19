@@ -10,6 +10,6 @@ public interface ICompteService {
 	public Compte findById(int id);
 
 	public List<Compte> findAll();
-	
+
 	public List<Compte> findByProprio(int proprio);
 }

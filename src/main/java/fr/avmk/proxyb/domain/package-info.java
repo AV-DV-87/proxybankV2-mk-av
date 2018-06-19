@@ -1,5 +1,5 @@
 /** 
- * decrit les differentes classes du package business
+ * Decrit les differentes classes du package business
  * @author Arnaud
  *
  */

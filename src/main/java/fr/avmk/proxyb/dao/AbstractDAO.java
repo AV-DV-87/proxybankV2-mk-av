@@ -15,7 +15,13 @@ import java.sql.SQLException;
  *
  */
 public abstract class AbstractDAO {
-
+	/**
+	 * Méthode permettant de fermer une connection à la BDD mysql
+	 * 
+	 * @param cn
+	 * @param st
+	 * @param rs
+	 */
 	protected void close(Connection cn, PreparedStatement st, ResultSet rs) {
 		try {
 			if (rs != null)

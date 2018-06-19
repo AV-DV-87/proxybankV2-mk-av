@@ -13,10 +13,10 @@ public class VirementServlet extends HttpServlet {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-	
+
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		this.getServletContext().getRequestDispatcher("/WEB-INF/views/virement.jsp").forward(req, resp);
 	}
-	
+
 }

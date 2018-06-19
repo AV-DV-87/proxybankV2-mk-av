@@ -19,7 +19,8 @@
 		<header>
 			<div class="row shadow">
 				<div class="col-2 p-3">
-					<img src="<c:url value="img/proxybank.png" />" alt="" class="img-fluid">
+					<img src="<c:url value="img/proxybank.png" />" alt=""
+						class="img-fluid">
 				</div>
 				<div class="col-8 d-flex justify-content-center align-items-center">
 					<h1>Proxybank System</h1>
@@ -28,17 +29,18 @@
 				<div
 					class="col-2  d-flex justify-content-center align-items-center flex-column">
 					<h3>Bienvenue</h3>
-					<span class="text-center"><c:out value="${username}"/></span>
-					<a href="#" class="text-center">Se deconnecter</a>
+					<span class="text-center"><c:out value="${username}" /></span> <a
+						href="#" class="text-center">Se deconnecter</a>
 				</div>
 			</div>
 			<div class="row mt-3">
 				<div class="col-md-6 mx-auto">
 					<ul class="nav justify-content-center">
-						<li class="nav-item"><a class="nav-link active" href="<c:url value="/liste-client"/>">Liste
-								des clients</a></li>
-						<li class="nav-item"><a class="nav-link" href="<c:url value="/virement"/>">Virement</a></li>
-								
+						<li class="nav-item"><a class="nav-link active"
+							href="<c:url value="/liste-client"/>">Liste des clients</a></li>
+						<li class="nav-item"><a class="nav-link"
+							href="<c:url value="/virement"/>">Virement</a></li>
+
 					</ul>
 				</div>
 			</div>
@@ -62,9 +64,11 @@
 								<th scope="row">${client.id}</th>
 								<td>${client.nom}</td>
 								<td>${client.prenom}</td>
-								<td><a href="<c:url value="/edition-client?client="/>${client.id}"
-									class="badge badge-primary perso-pill">Editer</a> 
-									<a href="<c:url value="/liste-compte?client="/>${client.id}"class="badge badge-primary perso-pill">Liste Compte</a>
+								<td><a
+									href="<c:url value="/edition-client?client="/>${client.id}"
+									class="badge badge-primary perso-pill">Editer</a> <a
+									href="<c:url value="/liste-compte?client="/>${client.id}"
+									class="badge badge-primary perso-pill">Liste Compte</a>
 							</tr>
 						</c:forEach>
 					</tbody>
