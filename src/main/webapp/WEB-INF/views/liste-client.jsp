@@ -19,7 +19,7 @@
 		<header>
 			<div class="row shadow">
 				<div class="col-2 p-3">
-					<img src="img/proxybank.png" alt="" class="img-fluid">
+					<img src="<c:url value="img/proxybank.png" />" alt="" class="img-fluid">
 				</div>
 				<div class="col-8 d-flex justify-content-center align-items-center">
 					<h1>Proxybank System</h1>
@@ -27,17 +27,18 @@
 				<!-- informations de la personne connéctée -->
 				<div
 					class="col-2  d-flex justify-content-center align-items-center flex-column">
-					<h2 class="text-center">Conseiller connecté</h2>
-					<a href="" class="text-center">Se deconnecter</a>
+					<h3>Bienvenue</h3>
+					<span class="text-center"><c:out value="${username}"/></span>
+					<a href="#" class="text-center">Se deconnecter</a>
 				</div>
 			</div>
 			<div class="row mt-3">
 				<div class="col-md-6 mx-auto">
 					<ul class="nav justify-content-center">
-						<li class="nav-item"><a class="nav-link active" href="#">Liste
+						<li class="nav-item"><a class="nav-link active" href="<c:url value="/liste-client"/>">Liste
 								des clients</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Se
-								connecter</a></li>
+						<li class="nav-item"><a class="nav-link" href="<c:url value="/virement"/>">Virement</a></li>
+								
 					</ul>
 				</div>
 			</div>
@@ -63,8 +64,7 @@
 								<td>${client.prenom}</td>
 								<td><a href="<c:url value="/edition-client"/>"
 									class="badge badge-primary perso-pill">Editer</a> 
-									<a href="/liste-compte"class="badge badge-primary perso-pill">Liste Compte</a> 
-									<a href="#" class="badge badge-primary perso-pill">Virement</a></td>
+									<a href="<c:url value="/liste-compte"/>"class="badge badge-primary perso-pill">Liste Compte</a>
 							</tr>
 						</c:forEach>
 					</tbody>

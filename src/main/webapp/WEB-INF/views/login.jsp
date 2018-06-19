@@ -25,21 +25,10 @@
             <div class="col-8 d-flex justify-content-center align-items-center">
                 <h1>Proxybank System</h1>
             </div>
-            <!-- informations de la personne connéctée -->
-            <div class="col-2  d-flex justify-content-center align-items-center flex-column">
-                <h2 class="text-center">Conseiller connecté</h2>
-                <a href="" class="text-center">Se deconnecter</a>
-            </div>
         </div>
         <div class="row mt-3">
             <div class="col-md-6 mx-auto">
                 <ul class="nav justify-content-center">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Liste des clients</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Se connecter</a>
-                    </li>
                 </ul>
             </div>
         </div>

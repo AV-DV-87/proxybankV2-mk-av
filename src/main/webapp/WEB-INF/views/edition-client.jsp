@@ -34,10 +34,9 @@
 			<div class="row mt-3">
 				<div class="col-md-6 mx-auto">
 					<ul class="nav justify-content-center">
-						<li class="nav-item"><a class="nav-link active" href="#">Liste
+						<li class="nav-item"><a class="nav-link active" href="<c:url value="/liste-client"/>">Liste
 								des clients</a></li>
-						<li class="nav-item"><a class="nav-link" href="#">Se
-								connecter</a></li>
+						<li class="nav-item"><a class="nav-link" href="<c:url value="/virement"/>">Virement</a></li>
 					</ul>
 				</div>
 			</div>
@@ -48,7 +47,7 @@
 
 			<form method="post">
 				<div class="form-row">
-						<%-- ajout d'un champs hidden contenant l'id pour ne pas perdre le client entre l'affichage et l'update --%>>
+						<%-- ajout d'un champs hidden contenant l'id pour ne pas perdre le client entre l'affichage et l'update --%>
 						<input name="id" type="hidden" required class="form-control"
 							id="id" placeholder="id">
 					<div class="form-group col-md-6">
