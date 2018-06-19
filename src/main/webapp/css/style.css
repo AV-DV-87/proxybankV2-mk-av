@@ -13,3 +13,10 @@ div#connexion{
 .perso-pill{
     padding: 1em;
 }
+
+h1{
+	color: #1e477a;
+}
+h3, h2{
+	color: #3b7bbf;
+}

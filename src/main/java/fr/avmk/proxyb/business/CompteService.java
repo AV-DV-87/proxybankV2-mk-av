@@ -23,4 +23,9 @@ public class CompteService implements ICompteService {
 		return dao.findAll();
 	}
 
+	@Override
+	public List<Compte> findByProprio(int proprio) {
+		return dao.findByProprio(proprio);
+	}
+
 }

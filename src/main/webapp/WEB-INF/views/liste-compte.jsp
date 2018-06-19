@@ -59,7 +59,7 @@
 						<c:forEach var="compte" items="${sessionScope.listeCompte}">
 							<tr>
 								<th scope="row">${compte.id}</th>
-								<td></td>
+								<td>${compte.type}</td>
 								<td>${compte.solde}</td>
 								<td><a href="#" class="badge badge-primary perso-pill">Virement</a></td>
 							</tr>

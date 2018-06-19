@@ -11,6 +11,7 @@ public class Compte {
 	private int id;
 	private double solde;
 	private Client proprietaire;
+	private String type;
 
 	public Compte() {
 		super();
@@ -50,6 +51,23 @@ public class Compte {
 	public void setSolde(double solde) {
 		this.solde = solde;
 	}
+	
+
+	/**
+	 * @return the type
+	 */
+	public String getType() {
+		return type;
+	}
+
+
+	/**
+	 * @param type the type to set
+	 */
+	public void setType(String type) {
+		this.type = type;
+	}
+
 
 	public Client getProprietaire() {
 		return proprietaire;
@@ -58,5 +76,6 @@ public class Compte {
 	public void setProprietaire(Client proprietaire) {
 		this.proprietaire = proprietaire;
 	}
+	
 
 }
