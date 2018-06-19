@@ -53,7 +53,9 @@
 		<filter-name>Filtre authentification</filter-name>
 		<!-- possibilité d'url multiple -->
 		<url-pattern>/liste-client</url-pattern>
-		<url-pattern>/client</url-pattern>
+		<url-pattern>/liste-compte</url-pattern>
+		<url-pattern>/virement</url-pattern>
+		<url-pattern>/edition-client</url-pattern>
 	</filter-mapping>
 	
 	<!-- Documentation pour les pages d'erreurs : https://docs.oracle.com/cd/E19316-01/819-3669/bnahi/index.html -->

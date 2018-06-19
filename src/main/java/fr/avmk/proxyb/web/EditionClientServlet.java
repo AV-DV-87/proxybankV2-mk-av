@@ -16,7 +16,7 @@ public class EditionClientServlet extends HttpServlet {
 	
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		this.getServletContext().getRequestDispatcher("/WEB-INF/views/liste-client.jsp").forward(req, resp);
+		this.getServletContext().getRequestDispatcher("/WEB-INF/views/edition-client.jsp").forward(req, resp);
 	}
 	
 }

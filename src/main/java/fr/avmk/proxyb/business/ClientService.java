@@ -26,8 +26,14 @@ public class ClientService implements IClientService {
 
 	@Override
 	public Client findById(int id) {
-		// TODO Auto-generated method stub
 		return clidao.findById(id);
+	}
+
+	@Override
+	public void updateClient(int id, String nom, String prenom, String adresse, String codep, String ville,
+			String email) {
+		clidao.update(id, nom, prenom, adresse, codep, ville, email);
+		
 	}
 
 }

@@ -46,8 +46,11 @@
 		<div class="col-md-6 mx-auto">
 			<h2>Client à modifier :</h2>
 
-			<form>
+			<form method="post">
 				<div class="form-row">
+						<%-- ajout d'un champs hidden contenant l'id pour ne pas perdre le client entre l'affichage et l'update --%>>
+						<input name="id" type="hidden" required class="form-control"
+							id="id" placeholder="id">
 					<div class="form-group col-md-6">
 						<label for="nom">Nom</label> <input name="nom" type="text"
 							minlength="2" maxlength="40" required class="form-control"
@@ -70,8 +73,8 @@
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-4">
-						<label for="cp">Code postal</label> <input name="cp" type="text"
-							class="form-control" id="cp">
+						<label for="codep">Code postal</label> <input name="codep" type="text"
+							class="form-control" id="codep">
 					</div>
 					<div class="form-group col-md-8">
 						<label for="ville">Ville</label> <input name="ville" type="text"

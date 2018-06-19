@@ -57,14 +57,15 @@
 					</thead>
 					<tbody>
 						<c:forEach var="client" items="${sessionScope.listeClient}">
-						<tr>
-							<th scope="row">${client.id}</th>
-							<td>${client.nom}</td>
-							<td>${client.prenom}</td>
-							<td><a href="#" class="badge badge-primary perso-pill">Editer</a>
-								<a href="#" class="badge badge-primary perso-pill">Liste
-									Compte</a> <a href="#" class="badge badge-primary perso-pill">Virement</a></td>
-						</tr>
+							<tr>
+								<th scope="row">${client.id}</th>
+								<td>${client.nom}</td>
+								<td>${client.prenom}</td>
+								<td><a href="<c:url value="/edition-client"/>"
+									class="badge badge-primary perso-pill">Editer</a> 
+									<a href="/liste-compte"class="badge badge-primary perso-pill">Liste Compte</a> 
+									<a href="#" class="badge badge-primary perso-pill">Virement</a></td>
+							</tr>
 						</c:forEach>
 					</tbody>
 				</table>
