@@ -5,7 +5,7 @@ import java.util.List;
 import fr.avmk.proxyb.domain.Client;
 import fr.avmk.proxyb.domain.Compte;
 
-public interface IClientDao {
+public interface IClientDAO {
 
 	/**
 	 * permet de visualiser la liste de clients

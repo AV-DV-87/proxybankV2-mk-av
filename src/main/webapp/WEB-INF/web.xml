@@ -52,7 +52,7 @@
 	<filter-mapping>
 		<filter-name>Filtre authentification</filter-name>
 		<!-- possibilité d'url multiple -->
-		<!--  <url-pattern>/liste-client</url-pattern> -->
+		<url-pattern>/liste-client</url-pattern>
 		<url-pattern>/client</url-pattern>
 	</filter-mapping>
 	
