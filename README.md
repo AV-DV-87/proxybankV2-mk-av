@@ -1,4 +1,4 @@
-Bienvenue sur ProxiBanqueSI_V2.0
+Bienvenue sur ProxiBanqueV2-mk-av
 Date : 19/06/2018
 Créateurs : Arnauld VALLETTE & Mohammed KHEZNADJI 
 
@@ -7,12 +7,15 @@ Pré-requis :
 * Avoir télécharger TomCat 8.5.31
 * Avoir télécharger Maven
 * Avoir télécharger le fichier proxybankV2-mk-av.war
-* Avoir paramétrer la variable d'environnement de tomCat
+
+Procédure d'installation :
+* Récupérer proxyb.sql dans le dossier src/main/scripts
+* créer une BDD "proxyb" MySQL en encodage UTF8 moteur InnoDB
+* importer le fichier proxyb.sql
 * Metrre le fichier .war dans le dossier webapps  
 
 ===============Fonctionnalitées présentes===============
-s'authentifier à l'application en saisant un login et un password valides:
-
+s'authentifier à l'application en saisant un login et un password valides.
 Consulter l'ensemble des clients d'un conseiller
 Pouvoir mettre à jour un client en modifiant ses informations: nom,prénom,email,adresse
 Consulter la liste des comptes disponibles d'un client : courant et épargne
