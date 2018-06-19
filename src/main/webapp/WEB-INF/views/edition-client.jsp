@@ -27,8 +27,9 @@
 				<!-- informations de la personne connéctée -->
 				<div
 					class="col-2  d-flex justify-content-center align-items-center flex-column">
-					<h2 class="text-center">Conseiller connecté</h2>
-					<a href="" class="text-center">Se deconnecter</a>
+					<h3>Bienvenue</h3>
+					<span class="text-center"><c:out value="${username}"/></span>
+					<a href="#" class="text-center">Se deconnecter</a>
 				</div>
 			</div>
 			<div class="row mt-3">
@@ -49,35 +50,37 @@
 				<div class="form-row">
 						<%-- ajout d'un champs hidden contenant l'id pour ne pas perdre le client entre l'affichage et l'update --%>
 						<input name="id" type="hidden" required class="form-control"
-							id="id" placeholder="id">
+							id="id" placeholder="id" value="${id}">
 					<div class="form-group col-md-6">
 						<label for="nom">Nom</label> <input name="nom" type="text"
 							minlength="2" maxlength="40" required class="form-control"
-							id="nom" placeholder="Nom">
+							id="nom" placeholder="Nom" value="${nom}">
 					</div>
 					<div class="form-group col-md-6">
 						<label for="prenom">Prenom</label> <input name="prenom"
 							type="text" minlength="2" maxlength="40" required
-							class="form-control" id="prenom" placeholder="Password">
+							class="form-control" id="prenom" placeholder="Prenom"
+							value="${prenom}">
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="email">Email</label> <input name="email" type="email"
-						class="form-control" id="email" placeholder="adresse">
+						class="form-control" id="email" placeholder="email"
+						value="${email}">
 				</div>
 				<div class="form-group">
 					<label for="adresse">Addresse</label> <input name="adresse"
 						type="text" class="form-control" id="adresse"
-						placeholder="adresse">
+						placeholder="adresse" value="${adresse}">
 				</div>
 				<div class="form-row">
 					<div class="form-group col-md-4">
 						<label for="codep">Code postal</label> <input name="codep" type="text"
-							class="form-control" id="codep">
+							class="form-control" id="codep" value="${codep}">
 					</div>
 					<div class="form-group col-md-8">
 						<label for="ville">Ville</label> <input name="ville" type="text"
-							class="form-control" id="ville">
+							class="form-control" id="ville" value="${ville}">
 					</div>
 				</div>
 				<button type="submit" class="btn btn-primary">Modifier</button>

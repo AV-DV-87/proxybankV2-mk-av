@@ -27,8 +27,9 @@
 				<!-- informations de la personne connéctée -->
 				<div
 					class="col-2  d-flex justify-content-center align-items-center flex-column">
-					<h2 class="text-center">Conseiller connecté</h2>
-					<a href="" class="text-center">Se deconnecter</a>
+					<h3>Bienvenue</h3>
+					<span class="text-center"><c:out value="${username}"/></span>
+					<a href="#" class="text-center">Se deconnecter</a>
 				</div>
 			</div>
 			<div class="row mt-3">

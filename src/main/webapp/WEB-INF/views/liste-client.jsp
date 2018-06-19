@@ -62,9 +62,9 @@
 								<th scope="row">${client.id}</th>
 								<td>${client.nom}</td>
 								<td>${client.prenom}</td>
-								<td><a href="<c:url value="/edition-client"/>"
+								<td><a href="<c:url value="/edition-client?client="/>${client.id}"
 									class="badge badge-primary perso-pill">Editer</a> 
-									<a href="<c:url value="/liste-compte"/>"class="badge badge-primary perso-pill">Liste Compte</a>
+									<a href="<c:url value="/liste-compte?client="/>${client.id}"class="badge badge-primary perso-pill">Liste Compte</a>
 							</tr>
 						</c:forEach>
 					</tbody>

@@ -55,16 +55,15 @@ public class ClientDAO extends AbstractDAO implements IClientDAO {
 			String ville, String email) {
 		Connection cn = null;
 		PreparedStatement st = null;
-		// initialisation du result set
+		// initialiser juste pour utiliser la méthode close de connection
 		ResultSet rs = null;
-		Client cl = new Client();
 		
 		try {
 			// recupération d'une connection grâce à l'abstract DAO
 			// Attention penser à la fermer
 			cn = getConnectionDM();
 
-			String sql = "UPDATE CLIENT SET NOM =?, PRENOM =?, ADRESSE =?, CODEPOSTAL =?, VILLE =?, EMAIL =?, idConseiller =? WHERE id="+id;
+			String sql = "UPDATE CLIENT SET NOM =?, PRENOM =?, EMAIL =?, ADRESSE =?, CODEP =?, VILLE =? WHERE id="+id;
 
 			st = cn.prepareStatement(sql);
 			
@@ -80,11 +79,6 @@ public class ClientDAO extends AbstractDAO implements IClientDAO {
 			// NE PAS OUBLIER car la connection �tablie d�sactive le
 			// le commit automatique
 			cn.commit();
-
-			while (rs.next()) {
-				cl.setNom(rs.getString(2));
-				cl.setId(rs.getInt(1));
-			}
 
 		} catch (ClassNotFoundException | SQLException e) {
 			e.printStackTrace();
@@ -121,8 +115,13 @@ public class ClientDAO extends AbstractDAO implements IClientDAO {
 			cn.commit();
 
 			while (rs.next()) {
-				cl.setNom(rs.getString(2));
 				cl.setId(rs.getInt(1));
+				cl.setNom(rs.getString(2));
+				cl.setPrenom(rs.getString(3));
+				cl.setEmail(rs.getString(4));
+				cl.setAdresse(rs.getString(5));
+				cl.setCode(rs.getInt(6));
+				cl.setVille(rs.getString(7));
 			}
 
 		} catch (ClassNotFoundException | SQLException e) {
